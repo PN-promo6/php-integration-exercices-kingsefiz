@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/5bb1d77498.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -26,24 +27,17 @@
                             </div>
                         </div>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">It's a dummy todo item</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item done">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">This task is complete</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Here is another item</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
+                            <?php
+                            $todoList = array("Envoyer la candidature", "Ecrire le rapport de stage", "Créer le répo git pour le stage");
+                            foreach ($todoList as $todoItem) {;
+                            ?>
+                                <li class="list-group-item">
+                                    <i class="far fa-square done-icon"></i>
+                                    <i class="far fa-check-square done-icon"></i>
+                                    <span class="todo-text"><?= $todoItem ?></span>
+                                    <i class="far fa-trash-alt"></i>
+                                </li>
+                            <?php } ?>
                         </ul>
                         <button id="clearBtn" type="button" class="btn btn-dark btn-sm">Clear All</button>
                     </div>
